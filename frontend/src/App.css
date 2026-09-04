@@ -1,0 +1,416 @@
+.home {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #1e1e1e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: #171717;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-button {
+  background: white;
+  color: #171717 !important;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  background: #e8e8e8;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #e9e2d5;
+  color: #705c40;
+  padding: 8px 14px;
+  border-radius: 30px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  margin: 0 0 30px;
+
+  letter-spacing: -4px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #876d4b;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #1c1c1c;
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #000;
+}
+
+.btn-secondary {
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: white;
+}
+
+
+/* =========================
+   HERO DECORATION
+========================= */
+
+.hero-decoration {
+  width: 330px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ded4c4;
+  border-radius: 180px 180px 20px 20px;
+
+  transform: rotate(3deg);
+}
+
+.book-icon {
+  font-size: 9rem;
+  transform: rotate(-8deg);
+}
+
+
+/* =========================
+   BOOKS
+========================= */
+
+.books-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+
+.section-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.section-tag {
+  color: #876d4b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin: 8px 0 0;
+}
+
+.view-all {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   BOOK CARDS
+========================= */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+
+  border: 1px solid #e5e0d8;
+
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.book-cover {
+  height: 190px;
+  background: #252525;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-cover span {
+  font-size: 5rem;
+}
+
+.book-info {
+  padding: 25px;
+}
+
+.book-category {
+  color: #9a7c54;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-info h3 {
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
+}
+
+.book-author {
+  color: #777;
+  margin: 0 0 15px;
+}
+
+.book-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.book-link {
+  display: inline-block;
+  margin-top: 15px;
+
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.book-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  padding: 30px;
+  border-top: 1px solid #d8d2c8;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #171717;
+  color: #999;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85rem;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+  .nav-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 25px;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-decoration {
+    width: 250px;
+    height: 300px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+}

@@ -1,19 +1,26 @@
-import os
-
-from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_migrate import Migrate
 from db import db
+import os
+from dotenv import load_dotenv
 from models.book import Book
 
 load_dotenv()
 
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "http://localhost:5173"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PATCH, DELETE, OPTIONS"
+    return response
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
+
 migrate = Migrate(app, db)
 
 @app.route("/books", methods=["POST"])
