@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/global.css";
 
 function Home() {
   const [livros, setLivros] = useState([]);
@@ -29,39 +30,7 @@ function Home() {
 
   return (
     <div className="home">
-
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="nav-container">
-
-          <Link to="/" className="logo">
-            <span>📚</span>
-            Livraria API
-          </Link>
-
-          <ul className="nav-links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-
-            <li>
-              <Link to="/books">Livros</Link>
-            </li>
-
-            <li>
-              <Link to="/add-book" className="nav-button">
-                Adicionar Livro
-              </Link>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-
-
-      {/* HERO */}
       <main>
-
         <section className="hero">
 
           <div className="hero-content">
@@ -87,8 +56,8 @@ function Home() {
                 Explorar livros →
               </Link>
 
-              <Link to="/add-book" className="btn-secondary">
-                Adicionar livro
+              <Link to="/bookcase" className="btn-secondary">
+                Bookcase
               </Link>
 
             </div>
@@ -205,9 +174,7 @@ function Home() {
 
         {/* FUNCIONALIDADES */}
         <section className="features">
-
           <div className="feature">
-
             <div className="feature-icon">
               📚
             </div>
@@ -231,12 +198,11 @@ function Home() {
             </div>
 
             <h3>
-              Adicione
+              Abasteça a sua estante
             </h3>
 
             <p>
-              Cadastre novos livros de forma rápida
-              e simples.
+              Adicione novos livros à sua coleção
             </p>
 
           </div>
@@ -253,16 +219,13 @@ function Home() {
             </h3>
 
             <p>
-              Atualize ou remova livros diretamente
-              pelo sistema.
+              Sistema simples e intuitivo para gerenciar seus livros
             </p>
 
           </div>
 
         </section>
-
       </main>
-
 
       {/* FOOTER */}
       <footer>

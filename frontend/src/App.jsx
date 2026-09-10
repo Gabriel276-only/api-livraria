@@ -1,21 +1,20 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Home from './pages/HomePage'
-
+import NavBar from "./components/navBar";
+import Home from "./pages/HomePage";
+import Catalogo from "./pages/Catalogo";
 
 function App() {
+    return (
+        <>
+            <NavBar />
 
-
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/catalogo" element={<Catalogo />} />
+            </Routes>
+        </>
+    );
 }
 
-export default App
+export default App;
